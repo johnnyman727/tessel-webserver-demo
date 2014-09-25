@@ -1,7 +1,9 @@
 Tessel Webserver Demo
 =========================
 
-This is a demonstration of using both a routing library (`tiny-router`) to field HTTP requests as well as a websocket connection (using `nodejs-websocket`) to a client. When a client goes to the IP Address of the Tessel, the Tessel will serve the static html file. When the client receives the HTML file, it will run the included JavaScript which opens up a websocket connection back to Tessel.
+This is a demonstration of using both a routing library (`tiny-router`) to field HTTP requests as well as a websocket connection (using `nodejs-websocket`) to a client. This is useful when you want to display an interface to a client and have that client manipulate the state of Tessel.
+
+When a client goes to the IP Address of the Tessel, the Tessel will serve the static html file. When the client receives the HTML file, it will run the included JavaScript which opens up a websocket connection back to Tessel.
 
 The HTML provided buttons for toggling the LEDs and the websocket will toggle `led0` every five seconds by default.
 
