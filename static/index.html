@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tessel Server</title>
+</head>
+ 
+<body >
+ 
+  <h1>Tessel Web Server</h1>
+  <button class="led" id="led-0">Toggle LED0</button>
+  <button class="led" id="led-1">Toggle LED1</button>
+  <button class="led" id="led-2">Toggle LED2</button>
+  <button class="led" id="led-3">Toggle LED3</button>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
+
+  <script>
+
+    // When one of our LED buttons is clicked, call toggleLED
+    $('.led').click(toggleLED);
+
+    function toggleLED() {
+
+      // Get the led number of the clicked button
+      var index = this.id.split('-')[1];
+
+      // Make an AJAX post to our tessel with the index
+      $.ajax({
+        type: "GET",
+        url: '/leds/' + index,
+        success: function() { console.log('led ' + index + ' toggled'); },
+      });
+    }
+  </script>
+
+  <script>
+    // Create a new websocket connection to Tessel
+    var exampleSocket = new WebSocket("ws://192.168.128.204:8081");
+
+    // We'll be flipping the state
+    var state = true;
+
+    // Every five seconds
+    setInterval(function() {
+      // Construct a packet
+      var packet = {led : 0, on : state}
+      // Send it over the websocket
+      exampleSocket.send(JSON.stringify(packet));
+      // Change the state var
+      state = !state
+
+    }, 5000);
+    
+  </script>
+</body>
+</html>

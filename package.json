@@ -1,0 +1,22 @@
+{
+  "name": "tessel-webserver-demo",
+  "version": "1.0.0",
+  "description": "Loading files from a Tessel web server over HTTP and websockets",
+  "main": "app.js",
+  "dependencies": {
+    "nodejs-websocket": "^1.0.0",
+    "tiny-router": "^0.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tessel",
+    "web",
+    "websocket",
+    "static"
+  ],
+  "author": "Jon McKay <jon@technical.io>",
+  "license": "MIT"
+}
