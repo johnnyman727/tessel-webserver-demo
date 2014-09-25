@@ -27,10 +27,11 @@ Once you have your IP Address, open up `/static/index.html` and insert your IP A
 tessel run app.js
 ```
 
-Then go to the IP address of your Tessel followed by the port in your web browser (for example `192.168.2.100:8080`).
+Then go to the IP address of your Tessel (followed by the port) in your web browser (for example `192.168.2.100:8080`).
 
-### What you'll see
-If you click any of the buttons in the loaded website, Tessel's LEDs will toggle. Additionally, the websocket will automatically toggle LED0 every five seconds.
+### What you can do
+
+If you click any of the buttons in the loaded website, Tessel's LEDs will toggle. Additionally, the websocket will automatically toggle `led0` every five seconds.
 
 
 ### Extra Notes
