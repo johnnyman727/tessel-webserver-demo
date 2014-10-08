@@ -1,6 +1,6 @@
 {
   "name": "tessel-webserver-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Loading files from a Tessel web server over HTTP and websockets",
   "main": "app.js",
   "dependencies": {

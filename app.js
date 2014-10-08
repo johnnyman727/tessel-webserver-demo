@@ -3,7 +3,7 @@ var router = require('tiny-router'),
     // Websocket library
     ws = require("nodejs-websocket"),
     // Use fs for static files
-    fs = require('fs')
+    fs = require('fs'),
     // Use tessel for changing the LEDs
     tessel = require('tessel');
  
